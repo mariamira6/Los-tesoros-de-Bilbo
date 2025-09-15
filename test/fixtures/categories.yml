@@ -1,0 +1,11 @@
+computer:
+  name: Informática
+
+books:
+  name: Libros
+
+music:
+  name: Música
+
+videogames:
+  name: Videojuegos

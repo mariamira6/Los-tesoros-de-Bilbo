@@ -1,14 +1,23 @@
-one:
+lord_of_the_rings:
   title: El Señor de los Anillos
   description: El mejor libro de la historia
   price: 45
+  category: books
 
-two:
+the_hobbit:
   title: El Hobbit
   description: Descubre la Tierra Media a través de las aventuras de Bilbo Bolsón
   price: 30
+  category: books
 
-three:
+silmarilion:
   title: El Silmarilion
   description: Descubre Arda y toda la mitología de El Señor de los Anillos
   price: 40
+  category: books
+
+bso_tolkien:
+  title: Banda Sonora Tolkien
+  description: 2 CD's que recopilan la banda sonora de El Señor de los Anillos con explicaciones y audioguía
+  price: 60
+  category: music

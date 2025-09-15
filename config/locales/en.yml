@@ -2,6 +2,7 @@ en:
   shared:
     header:
       link: "Add product"
+      categories: "Categories"
   products:
     edit:
       title: "Edit product"
@@ -21,6 +22,7 @@ en:
       destroyed: "The product has been deleted successfully."
   common:
     confirm: "This product will be deleted. Are you sure?"
+    back: "Back to categories"
   activerecord:
     models:
       product: Products
@@ -29,6 +31,7 @@ en:
         title: "Title"
         description: "Description"
         price: "Price"
+        category_id: "Category"
         photo: "Photo"
     errors:
       models:
@@ -40,3 +43,20 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+  categories:
+    category:
+      edit: "Edit"
+      delete: "Delete"
+    index:
+      title: "Categories"
+      new: "Add category"
+    edit:
+      title: "Edit category"
+    new:
+      title: "New category"
+    create:
+      created: "Category was successfully created"
+    update:
+      updated: "Category was successfully updated"
+    destroy:
+      destroyed: "Category was successfully destroyed"

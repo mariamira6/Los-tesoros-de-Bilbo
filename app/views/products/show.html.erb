@@ -5,6 +5,8 @@
 <p class="description"><%= @product.description %></p>
 
 <span class="price"><%= @product.price %>€</span>
+<br />
+<span class="price">Categoría: <%= @product.category.name %></span>
 
 <div>
 <%= link_to t('.edit_link'), edit_product_path(@product) %>

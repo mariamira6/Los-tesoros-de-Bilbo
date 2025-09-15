@@ -5,16 +5,17 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 3
+    assert_select '.product', 4
   end
 
   test 'render a detailed product page' do
-    get product_path(products(:one))
+    get product_path(products(:lord_of_the_rings))
 
     assert_response :success
     assert_select '.title', 'El Señor de los Anillos'
     assert_select '.description', 'El mejor libro de la historia'
     assert_select '.price', '45€'
+    assert_select '.category_id', categories(:books).id
   end
 
   test 'render a new product form' do
@@ -30,7 +31,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       {
         title: 'El Señor de los Anillos',
         description: 'La historia de Frodo y Sam',
-        price: 45
+        price: 45,
+        category_id: categories(:books).id
       }
     }
 
@@ -44,7 +46,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       {
         title: '',
         description: 'La historia de Frodo y Sam',
-        price: 45
+        price: 45,
+        category_id: categories(:books).id
       }
     }
 
@@ -52,14 +55,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
     test 'render a edit product form' do
-    get edit_product_path(products(:one))
+    get edit_product_path(products(:the_hobbit))
 
     assert_response :success
     assert_select 'form'
   end
 
    test 'allow to update a product' do
-    patch product_path(products(:one)), params: {
+    patch product_path(products(:the_hobbit)), params: {
       product:
       {
         price: 55
@@ -71,7 +74,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'does not allow to update a product' do
-    patch product_path(products(:one)), params: {
+    patch product_path(products(:the_hobbit)), params: {
       product:
       {
         price: nil
@@ -83,7 +86,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test 'can delete products' do
     assert_difference('Product.count', -1) do
-      delete product_path(products(:one))
+      delete product_path(products(:the_hobbit))
     end
 
     assert_redirected_to products_path

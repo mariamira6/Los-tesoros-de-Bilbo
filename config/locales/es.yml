@@ -2,6 +2,7 @@ es:
   shared:
     header:
       link: "Añadir producto"
+      categories: "Categorías"
   products:
     edit:
       title: "Editar producto"
@@ -21,6 +22,7 @@ es:
       destroyed: "El producto se ha eliminado correctamente."
   common:
     confirm: "Se va a eliminar este producto. ¿Estás seguro?"
+    back: "Volver"
   activerecord:
     models:
       product: Productos
@@ -29,6 +31,7 @@ es:
         title: "Título"
         description: "Descripción"
         price: "Precio"
+        category_id: "Categoría"
         photo: "Foto"
     errors:
       models:
@@ -40,3 +43,20 @@ es:
               blank: "no puede estar vacío"
             price:
               blank: "no puede estar vacío"
+  categories:
+    category:
+      edit: "Editar"
+      delete: "Eliminar"
+    index:
+      title: "Categorías"
+      new: "Añadir categorías"
+    edit:
+      title: "Editar categorías"
+    new:
+      title: "Nueva categoría"
+    create:
+      created: "La categoría ha sido creada con éxito."
+    update:
+      updated: "La categoría se ha actualizado con éxito."
+    destroy:
+      destroyed: "La categoría se ha eliminado correctamente."

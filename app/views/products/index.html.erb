@@ -1,4 +1,6 @@
 <h1><%= t('.title') %></h1>
 
+<%= render partial: 'shared/category', collection: @categories %>
+
 <%= render partial: 'shared/product', collection: @products %>
 
