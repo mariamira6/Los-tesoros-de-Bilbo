@@ -1,11 +1,14 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  description: MyText
-  price: 1
+  title: El Señor de los Anillos
+  description: El mejor libro de la historia
+  price: 45
 
 two:
-  title: MyString
-  description: MyText
-  price: 1
+  title: El Hobbit
+  description: Descubre la Tierra Media a través de las aventuras de Bilbo Bolsón
+  price: 30
+
+three:
+  title: El Silmarilion
+  description: Descubre Arda y toda la mitología de El Señor de los Anillos
+  price: 40

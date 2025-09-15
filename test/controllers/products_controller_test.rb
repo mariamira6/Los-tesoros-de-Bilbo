@@ -1,0 +1,83 @@
+require 'test_helper'
+
+class ProductsControllerTest < ActionDispatch::IntegrationTest
+  test 'render a list of products' do
+    get products_path
+
+    assert_response :success
+    assert_select '.product', 3
+  end
+
+  test 'render a detailed product page' do
+    get product_path(products(:one))
+
+    assert_response :success
+    assert_select '.title', 'El Señor de los Anillos'
+    assert_select '.description', 'El mejor libro de la historia'
+    assert_select '.price', '45€'
+  end
+
+  test 'render a new product form' do
+    get new_product_path
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+  test 'allow to create a new product' do
+    post products_path, params: {
+      product:
+      {
+        title: 'El Señor de los Anillos',
+        description: 'La historia de Frodo y Sam',
+        price: 45
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'El producto se ha añadido correctamente.'
+  end
+
+    test 'does not allow to create a new product with empty fields' do
+    post products_path, params: {
+      product:
+      {
+        title: '',
+        description: 'La historia de Frodo y Sam',
+        price: 45
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+
+    test 'render a edit product form' do
+    get edit_product_path(products(:one))
+
+    assert_response :success
+    assert_select 'form'
+  end
+
+   test 'allow to update a product' do
+    patch product_path(products(:one)), params: {
+      product:
+      {
+        price: 55
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'El producto se ha actualizado correctamente.'
+  end
+
+  test 'does not allow to update a product' do
+    patch product_path(products(:one)), params: {
+      product:
+      {
+        price: nil
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+end
