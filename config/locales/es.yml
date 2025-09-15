@@ -1,0 +1,42 @@
+es:
+  shared:
+    header:
+      link: "Añadir producto"
+  products:
+    edit:
+      title: "Editar producto"
+    new:
+      title: "Añadir producto"
+      link: "Añadir producto"
+    show:
+      edit_link: "Editar producto"
+      destroy_link: "Eliminar producto"
+    index:
+      title: "Productos"
+    create:
+      created: "El producto se ha añadido correctamente."
+    update:
+      updated: "El producto se ha actualizado correctamente."
+    destroy:
+      destroyed: "El producto se ha eliminado correctamente."
+  common:
+    confirm: "Se va a eliminar este producto. ¿Estás seguro?"
+  activerecord:
+    models:
+      product: Productos
+    attributes:
+      product:
+        title: "Título"
+        description: "Descripción"
+        price: "Precio"
+        photo: "Foto"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "no puede estar vacío"
+            description:
+              blank: "no puede estar vacío"
+            price:
+              blank: "no puede estar vacío"
