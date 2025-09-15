@@ -1,9 +1,4 @@
 <h1>Products</h1>
 
-<% @products.each do |product| %>
-  <%= link_to product_path(product.id), class: 'product' do %>
-  <h2><%= product.title %></h2>
-  <% end %>
-  <span><%= product.price%>€</span>
-<% end %>
+<%= render partial: 'product', collection: @products %>
 
