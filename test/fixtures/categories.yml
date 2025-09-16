@@ -9,3 +9,21 @@ music:
 
 videogames:
   name: Videojuegos
+
+movies:
+  name: Películas
+
+boardgames:
+  name: Juegos de Mesa
+
+collectibles:
+  name: Coleccionables
+
+toys:
+  name: Juguetes
+
+clothing:
+  name: Ropa
+
+art:
+  name: Arte y Decoración

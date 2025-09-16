@@ -1,8 +1,13 @@
 es:
+  app_name: "Los tesoros de Bilbo"
   shared:
     header:
       link: "Añadir producto"
       categories: "Categorías"
+  authentication:
+    users:
+      create:
+        created: "El usuario se ha creado correctamente."
   products:
     edit:
       title: "Editar producto"
@@ -14,9 +19,13 @@ es:
       destroy_link: "Eliminar producto"
     index:
       title: "Productos"
+      query_text: "Buscar productos"
       all: "Todos"
       min_price: "Precio mínimo"
       max_price: "Precio máximo"
+      expensive: "Más caros"
+      cheapest: "Más baratos"
+      newest: "Añadidos recientemente"
     create:
       created: "El producto se ha añadido correctamente."
     update:

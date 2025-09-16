@@ -1,16 +1,26 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.all.order(name: :asc).load_async
-    @products = Product.all.with_attached_photo.order(created_at: :desc).load_async
-    if params[:category_id]
-      @products = @products.where(category_id: params[:category_id])
-    end
-    if params[:min_price].present?
-      @products = @products.where("price >= ?", params[:min_price])
-    end
-    if params[:max_price].present?
-      @products = @products.where("price <= ?", params[:max_price])
-    end
+#Refactorizado en queries > find_products
+#    @products = Product.all.with_attached_photo.load_async
+
+#    if params[:query_text].present?
+#      @products = @products.search_full_text(params[:query_text])
+#    end
+#    if params[:category_id]
+#      @products = @products.where(category_id: params[:category_id])
+#    end
+#    if params[:min_price].present?
+#      @products = @products.where("price >= ?", params[:min_price])
+#    end
+#    if params[:max_price].present?
+#      @products = @products.where("price <= ?", params[:max_price])
+#    end
+#
+#    order_by = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
+#    @products = @products.order(order_by).load_async
+
+    @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 12)
   end
 
   def show
@@ -53,6 +63,10 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:title, :description, :price, :category_id, :photo)
+  end
+
+  def product_params_index
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
   end
 
   def product

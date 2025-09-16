@@ -1,8 +1,13 @@
 en:
+  app_name: "Bilbo's treasures"
   shared:
     header:
       link: "Add product"
       categories: "Categories"
+  authentication:
+    users:
+      create:
+        created: "The user has been created successfully."
   products:
     edit:
       title: "Edit product"
@@ -14,9 +19,13 @@ en:
       destroy_link: "Delete product"
     index:
       title: "Products"
+      query_text: "Search products"
       all: "All"
       min_price: "Min price"
       max_price: "Max price"
+      expensive: "Expensive first"
+      cheapest: "Cheaper first"
+      newest: "Recently added"
     create:
       created: "The product has been added successfully."
     update:
