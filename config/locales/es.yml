@@ -8,6 +8,10 @@ es:
     users:
       create:
         created: "El usuario se ha creado correctamente."
+    sessions:
+      create:
+        created: "Ha iniciado sesión correctamente."
+        failed: "Inicio de sesión inválido."
   products:
     edit:
       title: "Editar producto"

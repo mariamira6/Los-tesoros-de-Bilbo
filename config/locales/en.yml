@@ -8,6 +8,10 @@ en:
     users:
       create:
         created: "The user has been created successfully."
+    sessions:
+      create:
+        created: "Signed in successfully."
+        failed: "Invalid login."
   products:
     edit:
       title: "Edit product"
