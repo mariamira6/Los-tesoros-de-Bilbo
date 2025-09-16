@@ -14,6 +14,9 @@ es:
       destroy_link: "Eliminar producto"
     index:
       title: "Productos"
+      all: "Todos"
+      min_price: "Precio mínimo"
+      max_price: "Precio máximo"
     create:
       created: "El producto se ha añadido correctamente."
     update:
