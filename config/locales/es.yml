@@ -2,7 +2,7 @@ es:
   app_name: "Los tesoros de Bilbo"
   shared:
     header:
-      link: "Añadir producto"
+      add: "Añadir producto"
       categories: "Categorías"
       login: "Iniciar sesión"
       register: "Registrarse"

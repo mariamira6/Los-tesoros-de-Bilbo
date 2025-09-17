@@ -3,7 +3,7 @@ lord_of_the_rings:
   description: El mejor libro de la historia
   price: 45
   category: books
-  user: lucia
+  user: maria
 
 the_hobbit:
   title: El Hobbit
@@ -17,263 +17,263 @@ silmarilion:
   description: Descubre Arda y toda la mitología de El Señor de los Anillos
   price: 40
   category: books
-  user: alba
+  user: maria
 
 bso_tolkien:
   title: Banda Sonora Tolkien
   description: 2 CD's que recopilan la banda sonora de El Señor de los Anillos con explicaciones y audioguía
   price: 60
   category: music
-  user: lucia
+  user: maria
 
 rpg_laptop:
   title: Portátil Gamer Espada del Destino
   description: Laptop de alto rendimiento con luces RGB y sticker pack de universos de fantasía y ciencia ficción
   price: 1600
   category: computer
-  user: mateo
+  user: maria
 
 lightsaber_usb:
   title: Pendrive Sable de Luz
   description: USB con forma de sable láser, almacenamiento de 128GB, ideal para tus datos galácticos
   price: 35
   category: computer
-  user: alba
+  user: maria
 
 steampunk_fan:
   title: Ventilador Steampunk para PC
   description: Ventilador decorativo estilo steampunk con engranajes y luces LED, para tu torre épica
   price: 55
   category: computer
-  user: lucia
+  user: maria
 
 dune:
   title: Dune
   description: La obra maestra de Frank Herbert que dio origen a la ciencia ficción moderna
   price: 50
   category: books
-  user: mateo
+  user: maria
 
 neuromancer:
   title: Neuromante
   description: El clásico cyberpunk de William Gibson
   price: 35
   category: books
-  user: alba
+  user: maria
 
 foundation:
   title: Fundación
   description: La saga inmortal de Isaac Asimov sobre el futuro de la humanidad
   price: 40
   category: books
-  user: lucia
+  user: maria
 
 witcher_blood_elves:
   title: La sangre de los elfos
   description: Primer libro de la saga del brujo Geralt de Rivia
   price: 32
   category: books
-  user: mateo
+  user: maria
 
 stormlight_archive:
   title: El camino de los reyes
   description: Primer tomo de la épica saga El archivo de las tormentas de Brandon Sanderson
   price: 60
   category: books
-  user: alba
+  user: maria
 
 star_wars_soundtrack:
   title: Banda Sonora Star Wars
   description: Colección completa de John Williams en vinilo
   price: 120
   category: music
-  user: lucia
+  user: maria
 
 final_fantasy_vii_bso:
   title: Final Fantasy VII OST
   description: Banda sonora original del clásico RPG en 4 discos
   price: 70
   category: music
-  user: mateo
+  user: maria
 
 harry_potter_soundtrack:
   title: Harry Potter BSO
   description: Banda sonora de la saga completa en edición coleccionista
   price: 90
   category: music
-  user: alba
+  user: maria
 
 elden_ring:
   title: Elden Ring
   description: Videojuego de mundo abierto creado por From Software y George R.R. Martin
   price: 75
   category: videogames
-  user: lucia
+  user: maria
 
 skyrim:
   title: The Elder Scrolls V Skyrim
   description: Juego de rol épico en un mundo abierto lleno de dragones
   price: 50
   category: videogames
-  user: mateo
+  user: maria
 
 mass_effect:
   title: Mass Effect Trilogía
   description: Pack con los tres juegos originales de la saga espacial
   price: 85
   category: videogames
-  user: alba
+  user: maria
 
 hades:
   title: Hades
   description: Juego indie aclamado, lleno de mitología griega
   price: 30
   category: videogames
-  user: lucia
+  user: maria
 
 witcher_3:
   title: The Witcher 3 Wild Hunt
   description: Juego de rol de mundo abierto protagonizado por Geralt de Rivia
   price: 55
   category: videogames
-  user: mateo
+  user: maria
 
 lotr_bluray:
   title: Trilogía El Señor de los Anillos
   description: Versión extendida en Blu-ray con material adicional
   price: 100
   category: movies
-  user: alba
+  user: maria
 
 matrix_collection:
   title: Colección Matrix
   description: Las 4 películas de Matrix en formato 4K
   price: 95
   category: movies
-  user: lucia
+  user: maria
 
 harry_potter_boxset:
   title: Saga Harry Potter
   description: Colección completa de las 8 películas en edición coleccionista
   price: 110
   category: movies
-  user: mateo
+  user: maria
 
 star_wars_box:
   title: Saga Star Wars
   description: Los 9 episodios principales en Blu-ray con extras
   price: 140
   category: movies
-  user: alba
+  user: maria
 
 gloomhaven:
   title: Gloomhaven
   description: Juego de mesa cooperativo de fantasía y exploración de mazmorras
   price: 150
   category: boardgames
-  user: lucia
+  user: maria
 
 cthulhu_wars:
   title: Cthulhu Wars
   description: Juego de miniaturas gigantes basado en los mitos de Lovecraft
   price: 200
   category: boardgames
-  user: mateo
+  user: maria
 
 arkham_horror:
   title: Arkham Horror
   description: Juego de investigación y horror cósmico cooperativo
   price: 80
   category: boardgames
-  user: alba
+  user: maria
 
 mansions_madness:
   title: Mansiones de la locura
   description: Juego narrativo de exploración lovecraftiana
   price: 100
   category: boardgames
-  user: lucia
+  user: maria
 
 gandalf_figure:
   title: Figura Gandalf
   description: Estatua de Gandalf el Gris con bastón y sombrero
   price: 70
   category: collectibles
-  user: mateo
+  user: maria
 
 stormtrooper_helmet:
   title: Casco Stormtrooper
   description: Réplica oficial de Star Wars a tamaño real
   price: 180
   category: collectibles
-  user: alba
+  user: maria
 
 iron_man_funko:
   title: Funko Pop Iron Man
   description: Figura coleccionable edición limitada
   price: 25
   category: collectibles
-  user: lucia
+  user: maria
 
 lego_hogwarts:
   title: LEGO Hogwarts
   description: Castillo de Hogwarts con más de 6.000 piezas
   price: 400
   category: toys
-  user: mateo
+  user: maria
 
 lego_millennium_falcon:
   title: LEGO Halcón Milenario
   description: La nave más famosa de Star Wars en LEGO
   price: 500
   category: toys
-  user: alba
+  user: maria
 
 dnd_dice_set:
   title: Set de dados D&D
   description: Dados metálicos de 7 piezas con temática de dragones
   price: 35
   category: toys
-  user: lucia
+  user: maria
 
 gryffindor_scarf:
   title: Bufanda Gryffindor
   description: Bufanda de lana con los colores de la casa de Harry Potter
   price: 28
   category: clothing
-  user: mateo
+  user: maria
 
 stormlight_tshirt:
   title: Camiseta El Archivo de las Tormentas
   description: Camiseta negra con ilustración de Kaladin
   price: 22
   category: clothing
-  user: alba
+  user: maria
 
 dune_hoodie:
   title: Sudadera Dune
   description: Hoodie con el emblema de la Casa Atreides
   price: 45
   category: clothing
-  user: lucia
+  user: maria
 
 sauron_poster:
   title: Póster Sauron
   description: Ilustración artística de Sauron con estilo épico
   price: 20
   category: art
-  user: mateo
+  user: maria
 
 galaxy_lamp:
   title: Lámpara Galaxia
   description: Lámpara en 3D con forma de planeta iluminado
   price: 35
   category: art
-  user: alba
+  user: maria
 
 cthulhu_painting:
   title: Cuadro Cthulhu
   description: Pintura oscura de Cthulhu emergiendo del océano
   price: 60
   category: art
-  user: lucia
+  user: maria

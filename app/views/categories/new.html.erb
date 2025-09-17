@@ -1,7 +1,8 @@
-<h1><%= t(".title") %></h1>
+<h1 class="text-2xl font-bold mb-6 text-center mt-16"><%= t(".title") %></h1>
 
 <%= render "form", category: @category %>
 
-<div>
-  <%= link_to t("common.back"), categories_path %>
+<div class="text-center mt-24">
+  <%= link_to t("common.back"), categories_path,
+    class: "inline-block bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-900 transition-colors duration-300 ease-in-out" %>
 </div>

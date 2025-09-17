@@ -1,20 +1,25 @@
 <%= turbo_frame_tag "home" do %>
-  <h1><%= t(".title") %></h1>
-
-  <%= form_with url: products_path, method: :get do |form| %>
-      <%= form.text_field :query_text, placeholder: t(".query_text"), onChange: "this.form.requestSubmit()", value: params[:query_text] %>
-      <%= form.number_field :min_price, placeholder: t(".min_price"), onChange: "this.form.requestSubmit()", value: params[:min_price] %>
-      <%= form.number_field :max_price, placeholder: t(".max_price"), onChange: "this.form.requestSubmit()", value: params[:max_price] %>
-      <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order]}, params[:order_by]), {}, { onChange: "this.form.requestSubmit()" } %>
-      <% end %>
-
-  <br />
-  <p style="display: inline;"><%= link_to t(".all"), products_path %></p>
-  <%= render partial: "shared/category", collection: @categories %>
-
-<%= turbo_frame_tag "products-#{@pagy.page}", class: "products" do %>
-  <%= render partial: "shared/product", collection: @products %>
-  <%= turbo_frame_tag "products-#{@pagy.next}", class: "products", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
-<% end %>
-
+  <div style="background-image: url(<%= asset_path('hobbit.jpg') %>);" class="bg-cover bg-center h-96 w-full flex flex-col justify-end items-center">
+      <div class="flex justify-center gap-2 w-auto m-3 p-3">
+        <%= link_to t(".all"), products_path, class: "w-auto font-bold text-white px-4 py-2 drop-shadow-sm transform transition-all duration-200 hover:bg-teal-700 hover:scale-105 hover:rounded-2xl" %>
+        <%= render partial: "shared/category", collection: @categories %>
+      </div>
+  </div>
+  <div class="flex justify-center w-full">
+  <%= form_with url: products_path, method: :get,  html: { class: "flex lg:flex-row flex-wrap sm:flex-nowrap sm:flex-col gap-2 items-center justify-center bg-white p-4 w-full" } do |form| %>
+    <div class="flex gap-1 items-center">
+      <img src="<%= asset_path("buscar.png") %>" alt="Icono de búsqueda" class="w-6 h-6">
+      <%= form.text_field :query_text, placeholder: t(".query_text"), onChange: "this.form.requestSubmit()", value: params[:query_text], class:"bg-white my-2 w-64 px-4 py-2 rounded-2xl border border-gray-300" %>
+    </div>
+    <%= form.number_field :min_price, placeholder: t(".min_price"), onChange: "this.form.requestSubmit()", value: params[:min_price], class:"bg-white px-4 py-2 rounded-2xl border border-gray-300 w-48" %>
+    <%= form.number_field :max_price, placeholder: t(".max_price"), onChange: "this.form.requestSubmit()", value: params[:max_price], class:"bg-white px-4 py-2 rounded-2xl border border-gray-300 w-48 mx-2" %>
+    <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order]}, params[:order_by]), {}, { onChange: "this.form.requestSubmit()", class: "bg-white  px-4 py-2 rounded-2xl border border-gray-300 w-56" } %>
+  <% end %>
+  </div>
+  <%= turbo_frame_tag :products, class: "m-3" do %>
+    <%= turbo_frame_tag "products-#{@pagy.page}", class: "products flex flex-col sm:flex-row sm:flex-wrap sm:gap-x-2" do %>
+      <%= render partial: "shared/product", collection: @products %>
+      <%= turbo_frame_tag "products-#{@pagy.next}", class: "products flex flex-col sm:flex-row sm:flex-wrap sm:gap-x-2", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+    <% end %>
+  <% end %>
 <% end %>

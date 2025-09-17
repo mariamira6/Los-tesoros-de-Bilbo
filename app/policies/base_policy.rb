@@ -5,7 +5,7 @@ class BasePolicy
     @record = record
   end
 
-  def method_missing(, *args, &block)
+  def method_missing(m, *args, &block)
     false
   end
 end

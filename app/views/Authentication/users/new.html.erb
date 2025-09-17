@@ -1,26 +1,30 @@
-<%= form_with(model: @user) do |form| %>
-  <% @user.errors.full_messages.each do |error| %>
-    <div>
-      <%= error %>
+<h1 class="text-2xl font-bold mb-6 text-center mt-16">Registro de usuarios</h1>
+
+<%= form_with(model: @user, class: "max-w-md mx-auto bg-white p-6 rounded-lg shadow-md space-y-6") do |form| %>
+  <% if @user.errors.any? %>
+    <div class="bg-red-100 text-red-700 p-4 rounded">
+      <% @user.errors.full_messages.each do |error| %>
+        <p>• <%= error %></p>
+      <% end %>
     </div>
   <% end %>
 
   <div>
-    <%= form.label :email %>
-    <%= form.email_field :email, required: true %>
+    <%= form.label :email, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.email_field :email, required: true, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :username %>
-    <%= form.text_field :username, required: true %>
+    <%= form.label :username, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :username, required: true, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :password %>
-    <%= form.password_field :password, required: true %>
+    <%= form.label :password, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.password_field :password, required: true, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit "Registrarse", class: "mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-900 transition transition-colors duration-300 ease-in-out" %>
   </div>
 <% end %>

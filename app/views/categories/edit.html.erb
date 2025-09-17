@@ -1,10 +1,9 @@
 <% content_for :title, "Editing category" %>
 
-<h1>Editing category</h1>
+<h1 class="text-2xl font-bold mb-6 text-center mt-16">Editar categoría</h1>
 
 <%= render "form", category: @category %>
 
-
-<div>
-  <%= link_to t("common.back"), categories_path %>
+<div class="text-center mt-16">
+  <%= link_to t("common.back"), categories_path, class: "mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-900 transition-colors duration-300 ease-in-out" %>
 </div>

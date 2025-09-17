@@ -2,7 +2,7 @@ en:
   app_name: "Bilbo's treasures"
   shared:
     header:
-      link: "Add product"
+      add: "Add product"
       categories: "Categories"
       login: "Log in"
       register: "Register"

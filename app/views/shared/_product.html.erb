@@ -1,5 +1,8 @@
-<%= link_to product_path(product), class: "product", "data-turbo-frame": "_top" do %>
-    <h2><%= product.title %></h2>
+<%= link_to product_path(product), class: "product bg-white mb-2 rounded sm:w-[calc(33.33333%_-_.5rem)] lg:w-[calc(25%_-_.5rem)] min-h-[400px]", "data-turbo-frame": "_top" do %>
+    <%= image_tag product.photo, class: "w-full h-64 object-contain bg-gray-100" if product.photo.attached? %>
+    <div class="m-2">
+      <h2><%= product.title %></h2>
+      <span class="font-bold text-xl"><%= product.price%>€</span>
+      <p class="text-gray-500 text-sm mt-2"><%= product.description %></p>
+    </div>
 <% end %>
-<%= image_tag product.photo, width: 200 if product.photo.attached? %>
-<span><%= product.price%>€</span>

@@ -1,33 +1,38 @@
-<%= form_with model: @product do |form| %>
-  <% @product.errors.full_messages.each do |error| %>
-    <div>
-      <%= error %>
+<%= form_with model: @product, class: "max-w-md mx-auto bg-white p-6 rounded-lg shadow-md space-y-6" do |form| %>
+  <% if @product.errors.any? %>
+    <div class="bg-red-100 text-red-700 p-4 rounded">
+      <% @product.errors.full_messages.each do |error| %>
+        <p>• <%= error %></p>
+      <% end %>
     </div>
   <% end %>
+
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :title, required: true, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :description, required: true, rows: 4, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.label :price, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.number_field :price, required: true, step: 0.01, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
+    <%= form.label :category_id, "Categoría", class: "block text-sm font-medium text-gray-700" %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
   <div>
-    <%= form.label :photo %>
-    <%= form.file_field :photo %>
+    <%= form.label :photo, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.file_field :photo, class: "mt-1 block w-full text-sm text-gray-700 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-teal-200" %>
   </div>
 
-  <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit "Guardar producto", class: "mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-900 transition-colors duration-300 ease-in-out" %>
+  </div>
 <% end %>
