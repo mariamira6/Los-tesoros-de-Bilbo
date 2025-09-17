@@ -9,13 +9,13 @@
 <span class="category_name">Categoría: <%= @product.category.name %></span>
 
 <div>
-<%= link_to t(".edit_link"), edit_product_path(@product) %>
+<%= link_to t(".edit_link"), edit_product_path(@product) if @product.user == Current.user %>
 </div>
 
 <div>
 <%= link_to t(".destroy_link"), product_path(@product), data: {
   turbo_method: :delete,
   turbo_confirm: t("common.confirm")
-}
+} if @product.user = Current.user
 %>
 </div>

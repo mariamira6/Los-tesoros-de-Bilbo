@@ -9,10 +9,12 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true,
     length: { in: 3..15 },
     format: {
-      with: /\A[a-z-0-9-A-Z]+\z/,
+      with: /\A[a-z0-9A-Z]+\z/,
       message: :invalid
     }
   validates :password_digest, length: { minimum: 8 }
+
+  has_many :products, dependent: :destroy
 
   before_save :downcase_attributes
 

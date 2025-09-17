@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  skip_before_action :protect_pages, only: [:index, :show]
+
   def index
     @categories = Category.all.order(name: :asc).load_async
 #Refactorizado en queries > find_products
@@ -66,7 +68,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
   end
 
   def product
