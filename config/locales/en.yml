@@ -45,6 +45,7 @@ en:
     confirm: "This product will be deleted. Are you sure?"
     back: "Back to categories"
     not_logged_in: "You have to log in or create an account."
+    not_authorized: "You do not have permission for this action."
   activerecord:
     models:
       product: Product

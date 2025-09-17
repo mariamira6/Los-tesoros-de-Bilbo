@@ -10,7 +10,7 @@ the_hobbit:
   description: Descubre la Tierra Media a través de las aventuras de Bilbo Bolsón
   price: 30
   category: books
-  user: mateo
+  user: maria
 
 silmarilion:
   title: El Silmarilion
