@@ -1,6 +1,6 @@
 # Los tesoros de Bilbo
 
-Aplicación de ejemplo tipo marketplace, construida con **Ruby on Rails 7**, donde se gestionan productos organizados en categorías, con sistema de autenticación de usuarios además de filtros de búsqueda y opciones de ordenación.
+Aplicación de ejemplo tipo marketplace, construida con **Ruby on Rails 8**, donde se gestionan productos organizados en categorías, con sistema de autenticación de usuarios además de filtros de búsqueda y opciones de ordenación.
 
 ## Tecnologías
 
