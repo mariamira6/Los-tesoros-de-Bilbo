@@ -4,7 +4,7 @@ Aplicación de ejemplo tipo marketplace, construida con **Ruby on Rails 7**, don
 
 ## Tecnologías
 
-- **Ruby 3.4.5** + **Ruby on Rails 7**  
+- **Ruby 3.4.5** + **Ruby on Rails 8**  
 - **Hotwire (Turbo + Stimulus)** para reactividad  
 - **Tailwind CSS**  
 - **PostgreSQL**
